@@ -22,10 +22,8 @@ with (Client(username, apiID, apiHash)) as app:
             break
 
     header = False
-    am = 0
     for item in reader:
-        am += 1
-        if (not header) or am < 32:
+        if not header:
             header = True
             continue
 
